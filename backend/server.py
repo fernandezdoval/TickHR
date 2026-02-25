@@ -521,7 +521,8 @@ async def create_ticket(ticket_data: TicketCreate, request: Request):
     await db.tickets.insert_one(ticket)
     
     ticket["created_at"] = ticket["created_at"].isoformat()
-    del ticket["_id"] if "_id" in ticket else None
+    if "_id" in ticket:
+        del ticket["_id"]
     return ticket
 
 @api_router.get("/tickets")
