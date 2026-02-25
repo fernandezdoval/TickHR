@@ -1,0 +1,162 @@
+{
+  "project_name": "TickHR",
+  "design_philosophy": {
+    "name": "Corporate Clarity",
+    "description": "A sober, professional aesthetic that prioritizes data legibility and trust. High contrast, rigid grids, and a 'Navy & White' palette that evokes established financial/HR institutions.",
+    "core_values": [
+      "Sober & Modern",
+      "Data-First",
+      "Distraction-Free",
+      "Trustworthy"
+    ]
+  },
+  "typography": {
+    "font_family": {
+      "heading": "Manrope, sans-serif",
+      "body": "Public Sans, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "installation_instructions": "Import fonts from Google Fonts in index.css: @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Public+Sans:wght@300;400;500;600&display=swap');",
+    "usage_rules": {
+      "headings": "Use Manrope for all headings (h1-h4). Weight: 600 or 700. Tracking: -0.02em.",
+      "body": "Use Public Sans for all interface text. Weight: 400 for body, 500 for labels. Leading: relaxed.",
+      "numbers": "Use tabular-nums class for all data tables and metrics to ensure alignment."
+    }
+  },
+  "colors": {
+    "palette_name": "Executive Navy",
+    "theme_strategy": "Light Mode Primary (Corporate Standard). Dark Mode is secondary.",
+    "css_variables": {
+      "light": {
+        "--background": "210 40% 98%",
+        "--foreground": "222 47% 11%",
+        "--card": "0 0% 100%",
+        "--card-foreground": "222 47% 11%",
+        "--popover": "0 0% 100%",
+        "--popover-foreground": "222 47% 11%",
+        "--primary": "222 47% 11%",
+        "--primary-foreground": "210 40% 98%",
+        "--secondary": "210 40% 96.1%",
+        "--secondary-foreground": "222 47% 11%",
+        "--muted": "210 40% 96.1%",
+        "--muted-foreground": "215 16% 47%",
+        "--accent": "210 40% 96.1%",
+        "--accent-foreground": "222 47% 11%",
+        "--destructive": "0 84.2% 60.2%",
+        "--destructive-foreground": "210 40% 98%",
+        "--border": "214.3 31.8% 91.4%",
+        "--input": "214.3 31.8% 91.4%",
+        "--ring": "222 47% 11%",
+        "--radius": "0.5rem"
+      },
+      "dark": {
+        "--background": "222 47% 11%",
+        "--foreground": "210 40% 98%",
+        "--card": "222 47% 11%",
+        "--card-foreground": "210 40% 98%",
+        "--popover": "222 47% 11%",
+        "--popover-foreground": "210 40% 98%",
+        "--primary": "210 40% 98%",
+        "--primary-foreground": "222 47% 11%",
+        "--secondary": "217.2 32.6% 17.5%",
+        "--secondary-foreground": "210 40% 98%",
+        "--muted": "217.2 32.6% 17.5%",
+        "--muted-foreground": "215 20.2% 65.1%",
+        "--accent": "217.2 32.6% 17.5%",
+        "--accent-foreground": "210 40% 98%",
+        "--destructive": "0 62.8% 30.6%",
+        "--destructive-foreground": "210 40% 98%",
+        "--border": "217.2 32.6% 17.5%",
+        "--input": "217.2 32.6% 17.5%",
+        "--ring": "212.7 26.8% 83.9%"
+      }
+    },
+    "usage": {
+      "primary": "Used for Sidebar background, Primary Buttons, and Headings in Light Mode. This is the 'Navy Blue'.",
+      "secondary": "Used for backgrounds of secondary actions and muted sections.",
+      "accent": "Use sparingly for hover states.",
+      "background": "Light gray/blue tint (Slate 50) to differentiate from pure white cards."
+    }
+  },
+  "layout": {
+    "structure": "Sidebar Navigation (Left) + Top Header + Main Content Area.",
+    "grid_system": "Bento Grid for Dashboard. 12-column grid system.",
+    "spacing": {
+      "container_padding": "p-6 md:p-8",
+      "card_padding": "p-6",
+      "section_gap": "gap-6"
+    },
+    "z_index": {
+      "sidebar": 40,
+      "header": 30,
+      "modal": 50,
+      "toast": 60
+    }
+  },
+  "components": {
+    "buttons": {
+      "style": "Sharp corners or slightly rounded (rounded-md). No pill shapes.",
+      "primary": "bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm",
+      "secondary": "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+      "ghost": "hover:bg-accent hover:text-accent-foreground"
+    },
+    "cards": {
+      "style": "bg-card text-card-foreground border shadow-sm rounded-lg. Minimalist.",
+      "hover": "No lift effect. Keep it stable and professional."
+    },
+    "inputs": {
+      "style": "bg-transparent border-input focus:ring-2 focus:ring-ring focus:ring-offset-0 rounded-md"
+    },
+    "sidebar": {
+      "style": "Fixed width (250px). Dark Navy background (bg-slate-900) with White text. Active item: bg-slate-800 text-white."
+    }
+  },
+  "visual_enhancers": {
+    "shadows": "Subtle, diffuse shadows. shadow-sm or shadow-md. Avoid large, colored shadows.",
+    "borders": "1px solid borders in Slate-200. Crisp definition.",
+    "glassmorphism": "Use sparingly. Only for sticky headers if needed (backdrop-blur-md bg-white/80).",
+    "gradients": "FORBIDDEN. Use solid colors only."
+  },
+  "image_urls": {
+    "login_background": {
+      "url": "https://images.pexels.com/photos/273671/pexels-photo-273671.jpeg",
+      "description": "Modern bright corporate office meeting room. Use with a dark overlay (bg-slate-900/50) for text readability.",
+      "category": "background"
+    },
+    "user_placeholder": {
+      "url": "https://api.dicebear.com/7.x/avataaars/svg?seed=Felix",
+      "description": "Default user avatar if no image provided.",
+      "category": "avatar"
+    }
+  },
+  "instructions_to_main_agent": [
+    "1. INSTALL FONTS: Update index.css to import Manrope and Public Sans. Remove old font imports.",
+    "2. UPDATE TAILWIND: Configure tailwind.config.js to use the CSS variables defined in 'colors'. Ensure 'darkMode' is set to 'class'.",
+    "3. CSS VARIABLES: Replace the contents of index.css :root and .dark with the variables provided in this JSON.",
+    "4. LAYOUT: Create a 'DashboardLayout' component that includes the Sidebar and Header. Wrap all protected routes in this layout.",
+    "5. LOGIN PAGE: Use a Split Layout. Left side: Login Form (White bg). Right side: Image (login_background) with a quote or branding.",
+    "6. SHADCN: Use existing shadcn components but style them according to the 'Executive Navy' theme (square/rounded-md, not rounded-full).",
+    "7. DATA-TESTID: Add data-testid to all interactive elements (buttons, inputs, menu items).",
+    "8. CHARTS: Use Recharts with the 'Executive Navy' palette (Navy, Slate, Blue-Gray).",
+    "9. EXPENSES: This is a priority feature. Make the 'Upload Receipt' button prominent in the UI."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy",
+    "You MUST NOT apply universal transition. Eg: transition: all. This results in breaking transforms. Always add transitions for specific interactive elements like button, input excluding transforms",
+    "You MUST NOT center align the app container, ie do not add .App { text-align: center; } in the css file. This disrupts the human natural reading flow of text",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯📚🎭🎬🎪🎉🎊🎁🎀🎂🍰🎈🎨🎰💰💵💳🏦💎🪙💸🤑📊📈📉💹🔢🏆🥇 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Main agent relies on these image URLs. Missing categories (especially sponsor logos) = main agent will use placeholder text which is FORBIDDEN",
+    "Prioritize using pre-existing components from src/components/ui when applicable",
+    "Create new components that match the style and conventions of existing components when needed",
+    "Examine existing components to understand the project's component patterns before creating new ones",
+    "Components MUST use named exports (export const ComponentName = ...)",
+    "Pages MUST use default exports (export default function PageName() {...})",
+    "Use sonner for toasts. Sonner component are located in /app/src/components/ui/sonner.tsx"
+  ]
+}
