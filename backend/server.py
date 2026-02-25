@@ -444,6 +444,10 @@ async def clock_out(request: Request):
     if isinstance(clock_in_time, str):
         clock_in_time = datetime.fromisoformat(clock_in_time)
     
+    # Ensure both datetimes are timezone-aware
+    if clock_in_time.tzinfo is None:
+        clock_in_time = clock_in_time.replace(tzinfo=timezone.utc)
+    
     total_hours = (clock_out_time - clock_in_time).total_seconds() / 3600
     
     await db.clock_records.update_one(
